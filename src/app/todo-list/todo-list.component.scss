@@ -28,5 +28,9 @@
   ul {
     height: calc(var(--height-todolist) - var(--height-todolist-header) * 2);
     overflow: auto;
+    padding: 10px;
+  }
+  .todolist__input{
+    width: 90%;
   }
   
