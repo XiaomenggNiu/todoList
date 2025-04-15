@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FormsModule } from '@angular/forms';
+import { TodoService } from './services/todo.service';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -10,7 +11,8 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent, TodoListComponent],
-      imports: [HttpClientTestingModule, FormsModule],
+      imports:[HttpClientTestingModule, FormsModule],
+      providers:[TodoService]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
